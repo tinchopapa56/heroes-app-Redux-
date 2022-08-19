@@ -1,5 +1,5 @@
 import Axios from "axios"
-import HeroCard from "./HeroCard.js"
+import HeroCard from "../Herocard/HeroCard.js"
 import { useState, useEffect } from "react"
 import "./ApiHandle.css"
 
@@ -14,11 +14,11 @@ export default function ApiHandle(){
 useEffect( ()=>{
     const handleData = (data) => {
         const character = data;
-        //set Team
-        setTeam((prevTeam)=>{ return [...prevTeam, character]})
+        
+        setTeam((prevTeam)=>{ return [...prevTeam, character]}) //set Team
         console.log(team);
-        //set IDs to Avoid duplicates
-        const id = parseInt(character.id);
+        
+        const id = parseInt(character.id);                          //set IDs to Avoid duplicates
         setHerosId((prevHerosId)=>{ return [...prevHerosId, id] })
         console.log(herosId)
     }

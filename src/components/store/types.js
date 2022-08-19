@@ -1,0 +1,3 @@
+export const HEROS_REQUEST = "HEROS_REQUEST";
+export const HEROS_SUCCESS = "HEROS_SUCCESS";
+export const HEROS_FAILURE = "HEROS_FAILURE";

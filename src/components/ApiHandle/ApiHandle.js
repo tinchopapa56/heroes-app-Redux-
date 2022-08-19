@@ -2,6 +2,7 @@ import Axios from "axios"
 import HeroCard from "../Herocard/HeroCard.js"
 import { useState, useEffect } from "react"
 import "./ApiHandle.css"
+import {Link} from "react-router-dom"
 
 
 export default function ApiHandle(){
@@ -36,6 +37,7 @@ useEffect( ()=>{
     return(
         <main>
             <h2 onClick={() => setState(state+1)}>Get a Hero</h2>
+            <Link to="/team"><h3>See your team</h3></Link>
             <div className="team-container">
                 {/* {state} */}
                 {team.map( (hero)=>{
